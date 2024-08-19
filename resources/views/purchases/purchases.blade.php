@@ -38,6 +38,12 @@
             <thead>
 
                 <tr>
+                    <td class=" flex-1 text-right border border-gray-400 pr-2 py-1 text-green-700 font-bold">
+                        حذف
+                    </td>
+                    <td class=" flex-1 text-right border border-gray-400 pr-2 py-1 text-green-700 font-bold">
+                        تعديل
+                    </td>
                     <td class=" flex-2 text-right border border-gray-400 pr-2 py-1 text-green-700 font-bold">الاجمالي</td>
                     <td class=" flex-2 text-right border border-gray-400 pr-2 py-1 text-green-700 font-bold">الوحده</td>
                     <td class=" flex-2 text-right border border-gray-400 pr-2 py-1 text-green-700 font-bold">الكميه</td>
@@ -52,6 +58,18 @@
             <tbody>
                 {{-- for each  --}}
                 <tr>
+                    <td class=" flex-1 text-right border border-gray-400 pr-2 py-1  ">
+                        <form>
+                            <button type="submit" class="w-full">
+                                <img src="{{ asset('img/delete.png') }}" width="22px"
+                                    class="m-auto hover:scale-110 transition" alt="">
+                            </button>
+                        </form>
+                    </td>
+                    <td class=" flex-1 text-right border border-gray-400 pr-2 py-1  ">
+                        <a href="{{ route('update_cat', ['id' => 1]) }}"><img src="{{ asset('img/edit.png') }}"
+                                width="22px" class="m-auto hover:scale-110 transition" alt=""></a>
+                    </td>
                     <td class=" flex-2 text-right border border-gray-400 pr-2 py-1 ">200</td>
                     <td class=" flex-2 text-right border border-gray-400 pr-2 py-1 ">لتر</td>
                     <td class=" flex-2 text-right border border-gray-400 pr-2 py-1 ">2</td>
@@ -67,7 +85,7 @@
             <tfoot>
                 <tr></tr>
                 <tr>
-                    <td class=" flex-1 text-right border border-gray-400 pr-2 py-1 text-green-700 font-bold">
+                    <td class=" flex-1 text-right border border-gray-400 pr-2 py-1 text-green-700 font-bold" colspan="2">
                         50
                     </td>
                     <td class=" flex-2 text-right border border-gray-400 pr-2 py-1 text-green-700 font-bold" colspan="3">
@@ -76,13 +94,13 @@
                     <td class=" flex-1 text-right border border-gray-400 pr-2 py-1 text-green-700 font-bold">
                         200
                     </td>
-                    <td class=" flex-2 text-right border border-gray-400 pr-2 py-1 text-green-700 font-bold" colspan="2">
+                    <td class=" flex-2 text-right border border-gray-400 pr-2 py-1 text-green-700 font-bold" colspan="3">
                         الاجمالي
                     </td>
                 </tr>
                 <tr></tr>
                 <tr class="mt-4">
-                    <td colspan="3" class=" flex-1 text-right border border-gray-400 pr-2 py-1 text-green-700 font-bold">
+                    <td colspan="5" class=" flex-1 text-right border border-gray-400 pr-2 py-1 text-green-700 font-bold">
                         250 </td>
                     <td colspan="4" class=" flex-2 text-right border border-gray-400 pr-2 py-1 text-green-700 font-bold">
                         أجمالي بعد الضريبه</td>
@@ -101,26 +119,23 @@
                 {{-- Input ألقسم --}}
                 <tr class="w-full flex justify-end items-center py-2">
                     <td class="w-4/5 flex justify-end">
-                        <a href="" class="mr-4 hover:scale-110 transition"><img src="{{ asset('img/addb.png') }}"
-                                alt=""></a>
-                        <select class="w-[70%] text-center border border-gray-400">
-                            {{-- Here Option  --}}
-                            <option value="">MMMM</option>
-                            <option value="">AAA</option>
-                        </select>
+
+                        <input type="text" class="w-[70%] border border-gray-400">
                     </td>
-                    <td class="w-1/5 flex justify-end mr-2 font-bold">:العميل</td>
+                    <td class="w-1/5 flex justify-end mr-2 font-bold">:المورد</td>
                 </tr>
-                {{-- Input السعر --}}
+                {{-- Input رقم الهاتف --}}
                 <tr class="w-full flex justify-end items-center py-2">
-                    <td class="w-4/5 flex justify-end"><input type="number" class="w-[70%] border border-gray-400"></td>
-                    <td class="w-1/5 flex justify-end mr-2 font-bold">: السعر</td>
+                    <td class="w-4/5 flex justify-end">
+                        <input type="number" class="w-[70%] border border-gray-400">
+                    </td>
+                    <td class="w-1/5 flex justify-end mr-2 font-bold">: رقم الهاتف</td>
                 </tr>
                 {{-- Input تأريخ --}}
                 <tr class="w-full flex justify-end items-center py-2">
                     <td class="w-4/5 flex justify-end"><input type="date"
                             class="w-[70%] text-center border border-gray-400"></td>
-                    <td class="w-1/5 flex justify-end mr-2 font-bold">: تأريخ الصلاحيه</td>
+                    <td class="w-1/5 flex justify-end mr-2 font-bold">: تأريخ الشراء</td>
                 </tr>
 
                 {{-- Input الموصفات --}}
