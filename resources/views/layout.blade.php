@@ -42,7 +42,7 @@
            {{-- End Link --}}
           
            {{-- Start Link --}}
-            <a href="{{ route('Sales') }}" class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition" >
+            <a href="{{ route('cat') }}" class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition" >
                 <div class=" flex justify-center w-1/4 h-full items-center">
                     <img src={{ asset('img/dashboard.png') }} width="30px" >
                 </div>

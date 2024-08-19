@@ -14,7 +14,7 @@
                     </tr>
                     {{-- Input ألقسم --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end"><select class="w-[70%] text-center border border-black">
+                        <td class="w-4/5 flex justify-end"><select class="w-[70%] text-center border border-gray-400">
                                 {{-- Here Option  --}}
                                 <option value="">MMMM</option>
                                 <option value="">AAA</option>
@@ -23,7 +23,7 @@
                     </tr>
                     {{-- Input ألوحده --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end"><select class="w-[70%] text-center border border-black">
+                        <td class="w-4/5 flex justify-end"><select class="w-[70%] text-center border border-gray-400">
                                 {{-- Here Option  --}}
                                 <option value="">جرام</option>
                                 <option value="">حبه</option>
@@ -35,7 +35,7 @@
                     </tr>
                     {{-- Input السعر --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end"><input type="number" class="w-[70%] border border-black"></td>
+                        <td class="w-4/5 flex justify-end"><input type="number" class="w-[70%] border border-gray-400"></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">: السعر</td>
                     </tr>
                     {{-- Input تأريخ --}}
@@ -45,7 +45,7 @@
                     </tr>
                     {{-- Input ظهور اون لاين --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end"><select class="w-[70%] text-center border border-black">
+                        <td class="w-4/5 flex justify-end"><select class="w-[70%] text-center border border-gray-400">
                                 <option value="">نعم</option>
                                 <option value="">لا</option>
                             </select></td>
@@ -60,12 +60,12 @@
                     </tr>
                     {{-- Input السعر --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end"><input type="number" class="w-[70%] border border-black"></td>
+                        <td class="w-4/5 flex justify-end"><input type="number" class="w-[70%] border border-gray-400"></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">: الباركود</td>
                     </tr>
                     {{-- Input صوره --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end"><input type="file" class="w-[70%] border border-black"></td>
+                        <td class="w-4/5 flex justify-end"><input type="file" class="w-[70%] border border-gray-400"></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">: أضافه صوره</td>
                     </tr>
                    {{-- button --}}
