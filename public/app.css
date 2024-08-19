@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+tr:nth-child(even) {
+    background-color: #e7e7e7;
+}
+.Myshadow {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.514);
+}
+#Mainwindow {
+    display:none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition:.4s;
+}
+.Center {
+    background-color: white;
+    margin: 5% auto;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    padding: 22px 0;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
