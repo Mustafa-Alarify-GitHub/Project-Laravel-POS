@@ -1,10 +1,9 @@
 @extends('layout')
 @section('content')
-
     <form class="w-[90%] flex justify-start flex-col bg-white mt-9">
         <div class="w-full flex justify-center gap-5  bg-gray-200 items-center text-sm underline text-sky-500 mb-3  py-2">
             <a href="{{ route('home') }}" class="hover:text-red-600 transition">ألرئيسيه</a>
-            <a href="{{ route('cat') }}" class="hover:text-red-600 transition"> عرض الفواتير المحفوظه</a>
+            <a href="{{ route('GetAll_Invoice') }}" class="hover:text-red-600 transition"> عرض الفواتير المحفوظه</a>
         </div>
         <div class="flex justify-center items-center h-14 text-xl bg-gray-100 font-bold text-sky-400">
             المشتريات
@@ -170,7 +169,7 @@
     </form>
 @endsection
 
-<form id="Mainwindow">
+<form id="Mainwindow" >
     <div class="Center">
         <h1 class="text-2xl text-green-600 font-bold mb-5">تعديل المنتج</h1>
         <div class="w-full flex my-2  justify-center">
@@ -215,10 +214,10 @@
             <h1 class="mr-5  w-1/4 text-center font-bold text-sky-600 text-xl">القسم </h1>
         </div>
         <div class="w-full flex  my-2 justify-center mt-3">
-            <button onclick="ShowUpdate(false)"
+            <div onclick="ShowUpdate(false)"
                 class="bg-red-600 px-14 py-2 mx-2 text-white font-bold hover:bg-red-800 transition">
                 الغاء
-            </button>
+            </div>
             <button class="bg-green-600 px-14 py-2 text-white font-bold hover:bg-green-800 transition">
                 تعديل
             </button>

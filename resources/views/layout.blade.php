@@ -66,6 +66,17 @@
                 </h1>
             </a>
            {{-- End Link --}}
+          
+           {{-- Start Link --}}
+            <a href="{{ route('Expenses') }}" class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition" >
+                <div class=" flex justify-center w-1/4 h-full items-center">
+                    <img src={{ asset('img/expensive.png') }} width="30px" >
+                </div>
+                <h1 class=" flex justify-start transition items-center w-3/4 h-full font-bold">
+                    المصروفات
+                </h1>
+            </a>
+           {{-- End Link --}}
 
         </div>
         <div class="h-full w-5/6 bg-gray-200 flex justify-center  overflow-scroll">
