@@ -4,6 +4,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'Home')->name("home");
 Route::view('/AddItems', 'Items.Add_New_Items')->name("Add_Items");
+Route::view('/Branche', 'Branches.Branche')->name("Branch");
+Route::view('/AddBranches', 'Branches.AddNewBranche')->name("Add_Branchs");
+Route::view('/Empleoy', 'Empleoys.Empleoy')->name("Empleoy");
+Route::view('/AddEmpleoys', 'Empleoys.AddNewEmpleoy')->name("Add_Empleoys");
+Route::view('/Custmer', 'Custmers.Custmer')->name("Custmer");
+Route::view('/AddCustmers', 'Custmers.AddNewCustmer')->name("Add_Custmers");
+Route::view('/Inventory', 'Inventorys.Inventory')->name("Inventory");
+Route::view('/AddInventorys', 'Inventorys.AddNewInventory')->name("Add_Inventorys");
 Route::view('/Sales', 'Sales.Sales')->name("Sales");
 Route::view('/Invoice', 'Sales.Invoice')->name("print");
 Route::view('/Catogry', 'Catogry.GetAllCat')->name("cat");
@@ -18,4 +26,6 @@ Route::view('/AddNewResource', 'Resource.Add_New_Resource')->name("AddNewResourc
 Route::view('/GetAllResource', 'Resource.GetAllResource')->name("GetAllResource");
 Route::view('/Transfer', 'Transfer.Transfer')->name("Transfer");
 Route::view('/GetAll_Transfer', 'Transfer.GetAll_Transfer')->name("GetAll_Transfer");
+Route::view('/Addpromotonal', 'promotonal.Addpromotonal')->name("Addpromotonal");
+Route::view('/GetAll_promotonal', 'promotonal.GetAll_promotonal')->name("GetAll_promotonal");
 
