@@ -14,4 +14,8 @@ Route::view('/GetAll_Invoice', 'purchases.GetAll_Invoice')->name("GetAll_Invoice
 Route::view('/Expenses', 'Expenses.AddExpenses')->name("Expenses");
 Route::view('/GetAllExpenses', 'Expenses.Expenses')->name("getAllExpenses");
 Route::view('/ReportExpenses/{start}/{end}', 'Expenses.repoart')->name("repoart");
+Route::view('/AddNewResource', 'Resource.Add_New_Resource')->name("AddNewResource");
+Route::view('/GetAllResource', 'Resource.GetAllResource')->name("GetAllResource");
+Route::view('/Transfer', 'Transfer.Transfer')->name("Transfer");
+Route::view('/GetAll_Transfer', 'Transfer.GetAll_Transfer')->name("GetAll_Transfer");
 
