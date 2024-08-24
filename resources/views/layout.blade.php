@@ -55,6 +55,25 @@
                     </h1>
                 </a>
                 {{-- End Link --}}
+                {{-- Start Link --}}
+                <a href="{{ route('Custmer') }}" class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition" >
+                    <div class=" flex justify-center w-1/4 h-full items-center">
+                        <img src={{ asset('img/add_shopping.png') }} width="30px" >
+                    </div>
+                    <h1 class=" flex justify-start transition items-center w-3/4 h-full font-bold">
+                        العملاء
+                    </h1>
+                </a>
+                {{-- End Link --}}
+                <a href="{{ route('Inventory') }}" class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition" >
+                    <div class=" flex justify-center w-1/4 h-full items-center">
+                        <img src={{ asset('img/add_shopping.png') }} width="30px" >
+                    </div>
+                    <h1 class=" flex justify-start transition items-center w-3/4 h-full font-bold">
+                        الجرد
+                    </h1>
+                </a>
+                {{-- End Link --}}
            
            {{-- Start Link --}}
             <a href="{{ route('Sales') }}" class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition" >

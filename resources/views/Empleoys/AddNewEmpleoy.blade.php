@@ -15,18 +15,18 @@
                         <td class="w-1/5 flex justify-end mr-2 font-bold">: الأسم</td>
                     </tr>
                     {{-- Input رقم الهوية --}}
-                    <tr class="w-full flex justify-end items-center py-2 mt-10">
-                        <td class="w-4/5 flex justify-end"><input type="text" class="w-[70%]"></td>
+                    <tr class="w-full flex justify-end items-center py-2">
+                        <td class="w-4/5 flex justify-end"><input type="text" class="w-[70%] border border-black"></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">رقم الهوية</td>
                     </tr>
                     {{-- Input تاريخ الميلاد --}}
-                    <tr class="w-full flex justify-end items-center py-2 mt-10">
+                    <tr class="w-full flex justify-end items-center py-2">
                         <td class="w-4/5 flex justify-end"><input type="date" class="w-[70%]"></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">تاريخ الميلاد</td>
                     </tr>
                     {{-- Input الجنس --}}
-                    <tr class="w-full flex justify-end items-center py-2 mt-10">
-                        <td class="w-4/5 flex justify-end"><input type="text" class="w-[70%]"></td>
+                    <tr class="w-full flex justify-end items-center py-2">
+                        <td class="w-4/5 flex justify-end"><input type="text" class="w-[70%] border border-black"></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">الجنس</td>
                     </tr>
                     {{-- Input العنوان --}}
@@ -51,19 +51,25 @@
                     </tr>
                     {{-- Input  الصلاحيات --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end "><input type="text" class="w-[70%]  border border-black"></td>
+                        <td class="w-4/5 flex justify-end"><select class="w-[70%] text-center border border-gray-400">
+                                {{-- Here Option  --}}
+                                <option value="">مدير النظام</option>
+                                <option value="">مدير فرع</option>
+                                <option value="">مستخدم</option>
+                            </select></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">الصلاحيات</td>
                     </tr>
+
                     {{-- Input  الفرع--}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end "><input type="text" class="w-[70%]  border border-black"></td>
-                        <td class="w-1/5 flex justify-end mr-2 font-bold">الفرع</td>
+                        <td class="w-4/5 flex justify-end"><select class="w-[70%] text-center border border-gray-400">
+                                {{-- Here Option  --}}
+                                <option value="">ا</option>
+                                <option value="">ب</option>
+                            </select></td>
+                        <td class="w-1/5 flex justify-end mr-2 font-bold">:الفرع</td>
                     </tr>
-                    {{-- Input  الدرج--}}
-                    <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end "><input type="text" class="w-[70%]  border border-black"></td>
-                        <td class="w-1/5 flex justify-end mr-2 font-bold">الدرج</td>
-                    </tr>
+
                     {{-- Input  تاريخ مباشرة العمل--}}
                     <tr class="w-full flex justify-end items-center py-2">
                         <td class="w-4/5 flex justify-end "><input type="date" class="w-[70%]  border border-black"></td>

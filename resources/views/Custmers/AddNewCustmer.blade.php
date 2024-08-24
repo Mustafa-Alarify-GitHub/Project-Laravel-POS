@@ -2,7 +2,7 @@
 @section('content')
     <div class="w-[90%] flex justify-start flex-col bg-white mt-9">
         <div class="flex justify-center items-center h-14 text-xl bg-gray-100 font-bold text-sky-400">
-            أضافه فرع جديده
+            أضافه عميل جديده
         </div>
 
         <form>
@@ -12,27 +12,22 @@
                     {{-- Input Name --}}
                     <tr class="w-full flex justify-end items-center py-2 mt-10">
                         <td class="w-4/5 flex justify-end"><input type="text" class="w-[70%]"></td>
-                        <td class="w-1/5 flex justify-end mr-2 font-bold">: الأسم بالعربية</td>
+                        <td class="w-1/5 flex justify-end mr-2 font-bold">: الأسم </td>
                     </tr>
-                    {{-- Input الأسم بالانجليزية --}}
-                    <tr class="w-full flex justify-end items-center py-2 ">
-                        <td class="w-4/5 flex justify-end"><input type="text" class="w-[70%]  border border-black"></td>
-                        <td class="w-1/5 flex justify-end mr-2 font-bold">: الأسم بالانجليزية</td>
-                    </tr>
-                    {{-- Input العنوان --}}
+                    {{-- Input رقم الهوية --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end "><input type="text" class="w-[70%]  border border-black"></td>
-                        <td class="w-1/5 flex justify-end mr-2 font-bold">العنوان</td>
+                        <td class="w-4/5 flex justify-end"><input type="text" class="w-[70%] border border-black"></td>
+                        <td class="w-1/5 flex justify-end mr-2 font-bold"> الهوية</td>
                     </tr>
                     {{-- Input رقم الهاتف --}}
                     <tr class="w-full flex justify-end items-center py-2">
                         <td class="w-4/5 flex justify-end "><input type="text" class="w-[70%]  border border-black"></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">رقم الهاتف</td>
                     </tr>
-                    {{-- Input رقم الواتساب--}}
+                    {{-- Input العنوان --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                    <td class="w-4/5 flex justify-end "><input type="text" class="w-[70%]  border border-black"></td>
-                    <td class="w-1/5 flex justify-end mr-2 font-bold">رقم الواتساب</td>
+                        <td class="w-4/5 flex justify-end "><input type="text" class="w-[70%]  border border-black"></td>
+                        <td class="w-1/5 flex justify-end mr-2 font-bold">العنوان</td>
                     </tr>
                     {{-- Input البريد الالكتروني--}}
                     <tr class="w-full flex justify-end items-center py-2">
@@ -44,21 +39,23 @@
                     <td class="w-4/5 flex justify-end "><input type="text" class="w-[70%]  border border-black"></td>
                     <td class="w-1/5 flex justify-end mr-2 font-bold">الموقع الالكتروني</td>
                     </tr>
+                    {{-- Input رقم الواتساب--}}
+                    <tr class="w-full flex justify-end items-center py-2">
+                        <td class="w-4/5 flex justify-end "><input type="text" class="w-[70%]  border border-black"></td>
+                        <td class="w-1/5 flex justify-end mr-2 font-bold">اسم المندوب</td>
+                        </tr>
                     {{-- Input  العملة --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end"><select class="w-[70%] text-center border border-gray-400">
-                                {{-- Here Option  --}}
-                                <option value="">ريال</option>
-                                <option value="">دولار</option>
-                            </select></td>
-                        <td class="w-1/5 flex justify-end mr-2 font-bold">العملة</td>
-                    </tr>
-                    {{-- Input الرقم الضريبي--}}
-                    <tr class="w-full flex justify-end items-center py-2">
                     <td class="w-4/5 flex justify-end "><input type="text" class="w-[70%]  border border-black"></td>
-                    <td class="w-1/5 flex justify-end mr-2 font-bold">الرقم الضريبي</td>
+                    <td class="w-1/5 flex justify-end mr-2 font-bold">رقم هاتف المندوب</td>
                     </tr>
-
+                    {{-- Input  ملاحظات--}}
+                    <tr class="w-full flex justify-end items-center py-2">
+                        <td class="w-4/5 flex justify-end">
+                            <textarea class="w-[70%] text-center" name="" id="" cols="30" rows="5"></textarea>
+                        </td>
+                        <td class="w-1/5 flex justify-end mr-2 font-bold">: ملاحظات </td>
+                    </tr>
                     <tr></tr>
                     <tr>
                         <td colspan="2" class=" bg-white flex justify-center my-2">
@@ -71,7 +68,7 @@
 
                     </tr>
                     <tr class="w-full flex justify-center gap-5 mt-3 items-center text-sm underline text-sky-500  py-2">
-                        <td><a href="{{ route('Branch') }}" class="hover:text-red-600 transition">الفروع</a> </td>
+                        <td><a href="{{ route('Custmer') }}" class="hover:text-red-600 transition">العملاء</a> </td>
                         <td><a href="{{ route('home') }}" class="hover:text-red-600 transition mx-2">ألرئيسيه</a> </td>  
                     </tr>
                 </thead>
