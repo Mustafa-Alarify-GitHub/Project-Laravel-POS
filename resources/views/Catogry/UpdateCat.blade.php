@@ -5,18 +5,20 @@
             تعديل
         </div>
 
-        <form>
+        <form action="{{ route('cat.update', [$date->id]) }}" method="POST">
+            @csrf
+            @method('put')
             <table class="w-full">
                 <thead>
                     <tr></tr>
                     {{-- Input Name --}}
                     <tr class="w-full flex justify-end items-center py-2 mt-10">
-                        <td class="w-4/5 flex justify-end"><input type="text" class="w-[70%]"></td>
+                        <td class="w-4/5 flex justify-end"><input value="{{$date->name}}"  name="name" type="text" class="w-[70%] border border-black"></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">:الأسم</td>
                     </tr>
                     {{-- Input ألضريبه --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end "><input type="number" class="w-[70%]  border border-black"></td>
+                        <td class="w-4/5 flex justify-end "><input value="{{$date->texses}}" name="texses" type="number" class="w-[70%]  border border-black"></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">ألضريبه</td>
                     </tr>
 

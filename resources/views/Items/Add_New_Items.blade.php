@@ -1,7 +1,8 @@
 @extends('layout')
 @section('content')
     <div class="w-[95%] mt-10 bg-white Myshadow">
-        <form>
+        <form enctype="multipart/form-data" action="{{ route('routeName') }}" method="POST">
+            @csrf
             <table class="w-full">
                 <thead>
                     <tr class="w-full flex justify-center items-center text-xl py-2">
@@ -9,63 +10,71 @@
                     </tr>
                     {{-- Input Name --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end"><input type="text" class="w-[70%]"></td>
+                        <td class="w-4/5 flex justify-end"><input name="name" type="text" class="w-[70%]"></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">:الأسم التجاري</td>
                     </tr>
                     {{-- Input ألقسم --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end"><select class="w-[70%] text-center border border-gray-400">
+                        <td class="w-4/5 flex justify-end"><select name="cat" class="w-[70%] text-center border border-gray-400">
                                 {{-- Here Option  --}}
-                                <option value="">MMMM</option>
-                                <option value="">AAA</option>
+                                @foreach ($cat as $item)
+                                <option value="{{$item->id}}">{{$item->name}}</option>
+                                @endforeach
                             </select></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">:ألقسم</td>
                     </tr>
                     {{-- Input ألوحده --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end"><select class="w-[70%] text-center border border-gray-400">
-                                {{-- Here Option  --}}
-                                <option value="">جرام</option>
-                                <option value="">حبه</option>
-                                <option value="">كيلو</option>
-                                <option value="">لتر</option>
-                                <option value="">وحده</option>
+                        <td class="w-4/5 flex justify-end"><select name="unit" class="w-[70%] text-center border border-gray-400">
+                            @foreach ($units as $item)
+                            <option value="{{$item->id}}">{{$item->name}}</option>
+                            @endforeach
                             </select></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">:ألوحده</td>
                     </tr>
-                    {{-- Input السعر --}}
+                    {{-- Input الجمله السعر --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end"><input type="number" class="w-[70%] border border-gray-400"></td>
-                        <td class="w-1/5 flex justify-end mr-2 font-bold">: السعر</td>
+                        <td class="w-4/5 flex justify-end"><input name="wholesale_price" type="number" class="w-[70%] border border-gray-400"></td>
+                        <td class="w-1/5 flex justify-end mr-2 font-bold">: سعر الجمله</td>
+                    </tr>
+                    {{-- Input  سعر البيع --}}
+                    <tr class="w-full flex justify-end items-center py-2">
+                        <td class="w-4/5 flex justify-end"><input name="sales_price" type="number" class="w-[70%] border border-gray-400"></td>
+                        <td class="w-1/5 flex justify-end mr-2 font-bold">: سعر البيع</td>
+                    </tr>
+                    {{-- Input  حد النواقص --}}
+                    <tr class="w-full flex justify-end items-center py-2">
+                        <td class="w-4/5 flex justify-end"><input type="number" name="limit_Short" class="w-[70%] border border-gray-400"></td>
+                        <td class="w-1/5 flex justify-end mr-2 font-bold">: حد النواقص</td>
                     </tr>
                     {{-- Input تأريخ --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end"><input type="date" class="w-[70%] text-center"></td>
+                        <td class="w-4/5 flex justify-end"><input type="date" name="overTime" class="w-[70%] text-center"></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">: تأريخ الصلاحيه</td>
                     </tr>
                     {{-- Input ظهور اون لاين --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end"><select class="w-[70%] text-center border border-gray-400">
-                                <option value="">نعم</option>
-                                <option value="">لا</option>
+                        <td class="w-4/5 flex justify-end"><select name="isDisplay" class="w-[70%] text-center border border-gray-400">
+                                <option value="1">نعم</option>
+                                <option value="0">لا</option>
                             </select></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">:ظهور اون لاين</td>
                     </tr>
-                    {{-- Input تأريخ --}}
+                    {{-- Input الموصفات --}}
                     <tr class="w-full flex justify-end items-center py-2">
                         <td class="w-4/5 flex justify-end">
-                            <textarea class="w-[70%] text-center" name="" id="" cols="30" rows="5"></textarea>
+                            <textarea class="w-[70%] text-center border " name="description" id="" cols="30" rows="5"></textarea>
                         </td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">: الموصفات </td>
                     </tr>
                     {{-- Input السعر --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end"><input type="number" class="w-[70%] border border-gray-400"></td>
+                        <td class="w-4/5 flex justify-end"><input name="barcode" type="number" class="w-[70%] border border-gray-400"></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">: الباركود</td>
                     </tr>
                     {{-- Input صوره --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end"><input type="file" class="w-[70%] border border-gray-400"></td>
+                        <td class="w-4/5 flex justify-end"><input name="img" type="file" class="w-[70%] border border-gray-400"></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">: أضافه صوره</td>
                     </tr>
                    {{-- button --}}

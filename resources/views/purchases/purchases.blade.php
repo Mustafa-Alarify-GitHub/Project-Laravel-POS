@@ -200,6 +200,11 @@
                 <option value="">لتر</option>
                 <option value="">وحده</option>
             </select>
+            <select class="text-center m-auto border border-gray-400 font-bold">
+                <option value="">-- الحركه --</option>
+                <option value="">مشترئ</option>
+                <option value="">مرجع</option>
+            </select>
             <h1 class="mr-5  w-1/4 text-center font-bold text-sky-600 text-xl">الوحده </h1>
         </div>
         <div class="w-full flex  my-2 justify-center">

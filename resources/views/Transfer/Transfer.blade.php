@@ -132,15 +132,15 @@
                 <thead>
                     {{-- Input من تاريخ  --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end"><input type="date"
+                        <td class="w-4/5 flex justify-end"><input type="text"
                                 class="w-[70%] text-center border border-gray-400"></td>
-                        <td class="w-1/5 flex justify-end mr-2 font-bold">: من تاريخ </td>
+                        <td class="w-1/5 flex justify-end mr-2 font-bold">: من  </td>
                     </tr>
                     {{-- Input الي تأريخ  --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end"><input type="date"
+                        <td class="w-4/5 flex justify-end"><input type="text"
                                 class="w-[70%] text-center border border-gray-400"></td>
-                        <td class="w-1/5 flex justify-end mr-2 font-bold">: الي تأريخ </td>
+                        <td class="w-1/5 flex justify-end mr-2 font-bold">: الي  </td>
                     </tr>
 
 

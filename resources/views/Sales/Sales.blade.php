@@ -11,6 +11,10 @@
             <button class="bg-green-600 px-10 mr-3 py-2 text-white font-bold hover:bg-green-800 transition">أضافه
             </button>
             <input type="number" class="border border-gray-500 text-center w-20" placeholder="الكميه">
+            <select class="w-[10%] text-center border border-gray-400">
+                <option value="">بيع</option>
+                <option value="">ارجاع</option>
+            </select>
 
             <select class="w-[40%] text-center border border-gray-400">
                 <option value="">------------- أختر المنتج -------------</option>
@@ -90,19 +94,13 @@
                 {{-- Input السعر --}}
                 <tr class="w-full flex justify-end items-center py-2">
                     <td class="w-4/5 flex justify-end"><input type="number" class="w-[70%] border border-gray-400"></td>
-                    <td class="w-1/5 flex justify-end mr-2 font-bold">: السعر</td>
+                    <td class="w-1/5 flex justify-end mr-2 font-bold">: طرق الدفع</td>
                 </tr>
-                {{-- Input تأريخ --}}
-                <tr class="w-full flex justify-end items-center py-2">
-                    <td class="w-4/5 flex justify-end"><input type="date"
-                            class="w-[70%] text-center border border-gray-400"></td>
-                    <td class="w-1/5 flex justify-end mr-2 font-bold">: تأريخ الصلاحيه</td>
-                </tr>
-
+                
                 {{-- Input الموصفات --}}
-                <tr class="w-full flex justify-end items-center py-2">
+                <tr class="w-full flex justify-end items-center py-2 border border-gray-400">
                     <td class="w-4/5 flex justify-end">
-                        <textarea class="w-[70%] text-center" name="" id="" cols="30" rows="5"></textarea>
+                        <textarea class="w-[70%] text-center border border-gray-400" name="" id="" cols="30" rows="5"></textarea>
                     </td>
                     <td class="w-1/5 flex justify-end mr-2 font-bold">: الموصفات </td>
                 </tr>

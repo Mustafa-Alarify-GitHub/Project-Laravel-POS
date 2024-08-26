@@ -26,10 +26,10 @@
                             تعديل
                         </td>
                         <td class=" flex-2 text-right border border-gray-400 pr-2 py-1 text-green-700 font-bold">
-                            الي مخزن
+                            الي فرع
                         </td>
                         <td class=" flex-2 text-right border border-gray-400 pr-2 py-1 text-green-700 font-bold">
-                            من مخزن 
+                            من فرع 
                         </td>
                         <td class=" flex-2 text-right border border-gray-400 pr-2 py-1 text-green-700 font-bold">
                             الوصف
