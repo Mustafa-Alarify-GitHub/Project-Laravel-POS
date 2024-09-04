@@ -12,10 +12,7 @@ class ItemsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
- 
-    }
+    public function index() {}
 
     /**
      * Show the form for creating a new resource.
@@ -25,7 +22,6 @@ class ItemsController extends Controller
         $cat = cateogry::get();
         $units = units::get();
         return view('Items.Add_New_Items', ["cat" => $cat, "units" => $units]);
-       
     }
 
     /**
@@ -33,11 +29,23 @@ class ItemsController extends Controller
      */
     public function store(Request $request)
     {
-        // $img_path=$req->file('img')->store('','Images');
-
-        // DB::table('items')->insert([
-        //      'item_img'=>'/img_Items'.'/'.$img_path, 
-        // ]);
+        $img_path = $request->file('img')->store('', 'Images');
+        Items::create([
+            "name" => $request->name,
+            "mount" => $request->mount,
+            "cat" => $request->cat,
+            "unit" => $request->unit,
+            "wholesale_price" => $request->wholesale_price,
+            "sales_price" => $request->sales_price,
+            "limit_Short" => $request->limit_Short,
+            "overTime" => $request->overTime,
+            "isDisplay" => $request->isDisplay,
+            "description" => $request->description,
+            "barcode" => $request->barcode,
+            "img" =>  '/img_Items' . '/' . $img_path,
+        ]);
+        session()->flash('status', 'تمت العمليه بنجاح');
+        return to_route("Add_Items");
     }
 
     /**

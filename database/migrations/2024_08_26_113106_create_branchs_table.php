@@ -15,6 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('address');
+            $table->string('phone');
+            $table->string('numberTaxes');
+            $table->string('email')->unique();
+            $table->string('whatesApp');
             $table->foreignId('manger_B')->constrained('users')->cascadeOnDelete();
             $table->timestamps();
         });
