@@ -12,7 +12,8 @@ class UnitsController extends Controller
      */
     public function index()
     {
-        //
+     $data =units::orderBy("created_at","desc")->get();
+     return view("Units/GetAllUnits", ["date"=>$data]);
     }
 
     /**
@@ -28,7 +29,10 @@ class UnitsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        units::create([
+            "name"=>$request->name,
+        ]);
+        return to_route("units");
     }
 
     /**
@@ -58,8 +62,9 @@ class UnitsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(units $units)
+    public function destroy($id)
     {
-        //
+         units::destroy($id);
+        return to_route("units");
     }
 }

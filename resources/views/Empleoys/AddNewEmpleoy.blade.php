@@ -104,7 +104,7 @@
                     </tr>
                     <tr class="w-full flex justify-center gap-5 mt-3 items-center text-sm underline text-sky-500  py-2">
                         <td><a href="{{ route('Empleoy') }}" class="hover:text-red-600 transition">الفروع</a> </td>
-                        <td><a href="{{ route('home') }}" class="hover:text-red-600 transition mx-2">ألرئيسيه</a> </td>  
+                        <td><a href="{{ route('home') }}" class="hover:text-red-600 transition mx-2">ألرئيسيه</a> </td>
                     </tr>
                 </thead>
             </table>

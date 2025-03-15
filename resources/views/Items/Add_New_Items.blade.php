@@ -1,6 +1,7 @@
 @extends('layout')
 @section('content')
     <div class="w-[95%] mt-10 bg-white Myshadow">
+        
         <form action="{{ route('item.store') }}" enctype="multipart/form-data" method="POST">
             @csrf
             <table class="w-full">

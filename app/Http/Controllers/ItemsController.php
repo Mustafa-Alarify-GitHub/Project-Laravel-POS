@@ -12,7 +12,11 @@ class ItemsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index() {}
+    public function index() {
+        $data=Items::all();
+        return view('Items/Show_all_items', ["products" => $data]);
+
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -21,7 +25,8 @@ class ItemsController extends Controller
     {
         $cat = cateogry::get();
         $units = units::get();
-        return view('Items.Add_New_Items', ["cat" => $cat, "units" => $units]);
+
+        return view('Items/Add_New_Items', ["cat" => $cat, "units" => $units]);
     }
 
     /**

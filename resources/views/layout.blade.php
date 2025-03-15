@@ -34,6 +34,15 @@
                     أضافه صنف جديد
                 </h1>
             </a>
+            <a href="{{ route('get_Items') }}"
+                class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition">
+                <div class=" flex justify-center w-1/4 h-full items-center">
+                    <img src={{ asset('img/add_shopping.png') }} width="30px">
+                </div>
+                <h1 class=" flex justify-start transition items-center w-3/4 h-full font-bold">
+                    المنتجات
+                </h1>
+            </a>
             {{-- End Link --}}
             {{-- Start Link --}}
             <a href="{{ route('Sales') }}"
@@ -49,18 +58,18 @@
 
           
 
-            {{-- Start Link --}}
-            <a href="{{ route('Branch') }}" class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition" >
+            <!-- {{-- Start Link --}} -->
+            <a href="{{ route('units') }}" class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition" >
             <div class=" flex justify-center w-1/4 h-full items-center">
                 <img src={{ asset('img/branch.png') }} width="30px" >
             </div>
             <h1 class=" flex justify-start transition items-center w-3/4 h-full font-bold">
-                    الفروع
+                    الوحدات
             </h1>
             </a>
-            {{-- End Link --}}
+            <!-- {{-- End Link --}} -->
 
-                {{-- Start Link --}}
+                <!-- {{-- Start Link --}}
                 <a href="{{ route('Empleoy') }}" class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition" >
                     <div class=" flex justify-center w-1/4 h-full items-center">
                         <img src={{ asset('img/employee.png') }} width="30px" >
@@ -69,7 +78,7 @@
                         الموظفين
                     </h1>
                 </a>
-                {{-- End Link --}}
+                {{-- End Link --}} -->
                 
                 {{-- Start Link --}}
                 <a href="{{ route('Custmer') }}" class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition" >
@@ -80,7 +89,7 @@
                         العملاء
                     </h1>
                 </a>
-                {{-- End Link --}}
+                <!-- {{-- End Link --}}
                 <a href="{{ route('Inventory') }}" class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition" >
                     <div class=" flex justify-center w-1/4 h-full items-center">
                         <img src={{ asset('img/stock.png') }} width="30px" >
@@ -89,7 +98,7 @@
                         الجرد
                     </h1>
                 </a>
-                {{-- End Link --}}
+                {{-- End Link --}} -->
            
          
             {{-- Start Link --}}
@@ -116,7 +125,7 @@
             </a>
             {{-- End Link --}}
 
-            {{-- Start Link --}}
+            <!-- {{-- Start Link --}}
             <a href={{ route('Expenses') }}
                 class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition">
                 <div class=" flex justify-center w-1/4 h-full items-center">
@@ -126,9 +135,9 @@
                     المصروفات
                 </h1>
             </a>
-            {{-- End Link --}}
+            {{-- End Link --}} -->
            
-            {{-- Start Link --}}
+            <!-- {{-- Start Link --}}
             <a href={{ route('AddNewResource') }}
                 class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition">
                 <div class=" flex justify-center w-1/4 h-full items-center">
@@ -138,9 +147,10 @@
                     الموردين
                 </h1>
             </a>
-            {{-- End Link --}}
+            {{-- End Link --}} -->
            
-            {{-- Start Link --}}
+            <!-- {{-- Start Link --}}
+
             <a href={{ route('Transfer') }}
                 class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition">
                 <div class=" flex justify-center w-1/4 h-full items-center">
@@ -150,7 +160,8 @@
                     التحويل
                 </h1>
             </a>
-            {{-- End Link --}}
+
+            {{-- End Link --}} -->
             {{-- Start Link --}}
             <a href={{ route('Addpromotonal') }}
                 class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition">
@@ -159,6 +170,16 @@
                 </div>
                 <h1 class=" flex justify-start transition items-center w-3/4 h-full font-bold">
                     العروض الترويجيه
+                </h1>
+            </a>
+            {{-- End Link --}}
+
+            {{-- Start Link --}}
+            <a href={{ route('logout') }}
+                class="w-[95%] mt-auto text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition">
+             
+                <h1 class=" mx-auto flex justify-start transition items-center w-3/4 h-full font-bold">
+                     تسجيل الخروج
                 </h1>
             </a>
             {{-- End Link --}}

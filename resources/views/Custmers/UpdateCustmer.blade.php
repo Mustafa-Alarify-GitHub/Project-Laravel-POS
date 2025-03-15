@@ -2,12 +2,13 @@
 @section('content')
     <div class="w-[90%] flex justify-start flex-col bg-white mt-9">
         <div class="flex justify-center items-center h-14 text-xl bg-gray-100 font-bold text-sky-400">
-            أضافه عميل جديده
+            تعديل عميل جديده
         </div>
 
         <form action="{{ route('add.Custmer') }}" method="POST">
             @csrf
-             <table class="w-full">
+            @method('put')
+            <table class="w-full">
                 <thead>
                     <tr></tr>
                     {{-- Input Name --}}
@@ -18,13 +19,15 @@
 
                     {{-- Input رقم الهاتف --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end "><input type="text" name="phone" class="w-[70%]  border border-black"></td>
+                        <td class="w-4/5 flex justify-end "><input type="text" name="phone"
+                                class="w-[70%]  border border-black"></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">رقم الهاتف</td>
                     </tr>
 
                     {{-- Input البريد الالكتروني --}}
                     <tr class="w-full flex justify-end items-center py-2">
-                        <td class="w-4/5 flex justify-end "><input type="email" name="email" class="w-[70%]  border border-black"></td>
+                        <td class="w-4/5 flex justify-end "><input type="email" name="email"
+                                class="w-[70%]  border border-black"></td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">البريد الالكتروني</td>
                     </tr>
 

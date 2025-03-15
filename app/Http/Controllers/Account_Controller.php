@@ -15,25 +15,16 @@ class Account_Controller extends Controller
     }
     public function Register(Request $request)
     {
-        // $validation = Validator::make($request->all(), [
-        //     "name" => "required",
-        //     "email" => "required",
-        //     "password" => "required",
-        //     "phone" => "required"
-        // ]);
-        User::create($request->all());
+       $newUser= User::create($request->all());
+        Auth()->login($newUser);
+        return view("Home");
     }
     public function Login_user(Request $request)
     {
-        // $validation = Validator::make($request->all(), [
-        //     "name" => "required",
-        //     "email" => "required",
-        //     "password" => "required",
-        //     "phone" => "required"
-        // ]);
         $date = User::where("email", $request->email)->first();
         if ($date) {
             if (Hash::check($request->password, $date->password)) {
+        auth()->login($date);
                 return view("Home",["rank"=>$date->rank]);
             }
         }
