@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Branchs;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class BranchsController extends Controller
@@ -12,54 +13,44 @@ class BranchsController extends Controller
      */
     public function index()
     {
-        //
+        $branches = Branchs::all();
+
+        return view('Branches.index', ["branches" => $branches] );
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+            $managers = User::all(); 
+        return view('Branches.AddNewBranche', compact('managers'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+
+        Branchs::create($request->all());
+        return redirect()->route('branches.index')->with('success', 'Branch added successfully.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Branchs $branchs)
+    public function edit($id)
     {
-        //
+        $branch = Branchs::findOrFail($id);
+        return response()->json($branch); // Return the branch data as JSON for inline editing
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Branchs $branchs)
-    {
-        //
-    }
+public function update(Request $request, $id)
+{
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Branchs $branchs)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Branchs $branchs)
+    $branch = Branchs::findOrFail($id);
+    $branch->update($request->all());
+
+    return response()->json(['success' => true, 'message' => 'Branch updated successfully.']);
+}
+
+    public function destroy($id)
     {
-        //
+        $branch = Branchs::findOrFail($id);
+        $branch->delete();
+        return redirect()->route('branches.index')->with('success', 'Branch deleted successfully.');
     }
 }

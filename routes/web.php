@@ -5,6 +5,8 @@ use App\Http\Controllers\CateogryController;
 use App\Http\Controllers\Cutomers_Controller;
 use App\Http\Controllers\UnitsController;
 use App\Http\Controllers\ItemsController;
+use App\Http\Controllers\BranchsController;
+use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(["guest"])->group(function () {
@@ -36,6 +38,9 @@ Route::middleware(["auth"])->group(function () {
         Route::get('/AddItems', 'create')->name("Add_Items");
         Route::get('/items', 'index')->name("get_Items");
         Route::post('/AddItems', 'store')->name("item.store");
+        Route::get('/items/{id}', 'edit')->name("item.edit");
+        Route::put('/items/{id}', 'update')->name("item.update");
+        Route::delete('/items/{id}', 'destroy')->name("item.destroy");
     });
 
     Route::view('/homeDeshboard', 'Home')->name("home");
@@ -46,15 +51,17 @@ Route::middleware(["auth"])->group(function () {
         Route::delete('/units/{id}', 'destroy')->name("delete.units");
 
     });
-    Route::view('/Branche', 'Branches.Branche')->name("Branch");
-    Route::view('/AddBranches', 'Branches.AddNewBranche')->name("Add_Branchs");
-    Route::view('/Empleoy', 'Empleoys.Empleoy')->name("Empleoy");
-    Route::view('/AddEmpleoys', 'Empleoys.AddNewEmpleoy')->name("Add_Empleoys");
+    Route::resource('branches', BranchsController::class);
+    Route::resource('employees', EmployeeController::class);
+    // Route::view('/Branche', 'Branches.Branche')->name("Branch");
+    // Route::view('/AddBranches', 'Branches.AddNewBranche')->name("Add_Branchs");
+    // Route::view('/Empleoy', 'Empleoys.Empleoy')->name("Empleoy");
+    // Route::view('/AddEmpleoys', 'Empleoys.AddNewEmpleoy')->name("Add_Empleoys");
     Route::get('/Custmer', [Cutomers_Controller::class,"index"])->name("Custmer");
     Route::post('/Custmer', [Cutomers_Controller::class,"store"])->name("add.Custmer");
     Route::delete('/Custmer/{id}', [Cutomers_Controller::class,"destroy"])->name("delete.Custmer");
+    Route::get('/Custmer/{id}', [Cutomers_Controller::class,"edit"])->name("show.Custmer");
     Route::put('/Custmer/{id}', [Cutomers_Controller::class,"update"])->name("edit.Custmer");
-    Route::get('/Custmer/{id}', [Cutomers_Controller::class,"show"])->name("show.Custmer");
     Route::view('/AddCustmers', 'Custmers.AddNewCustmer')->name("Add_Custmers");
     Route::view('/Inventory', 'Inventorys.Inventory')->name("Inventory");
     Route::view('/AddInventorys', 'Inventorys.AddNewInventory')->name("Add_Inventorys");

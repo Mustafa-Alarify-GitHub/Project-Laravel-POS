@@ -50,10 +50,11 @@
                     {{-- ------------------------------------ --}}
                     {{-- For each Here --}}
                     {{-- ------------------------------------ --}}
-                    @foreach ($data as $d)
+                    @foreach ($customers as $customer)
                         <tr>
                             <td class=" flex-1 text-right border border-gray-400 pr-2 py-1  ">
-                                <form action="{{ route('delete.Custmer', [$d->id]) }}" method="POST">
+                                {{-- @if ($d && isset($customer->id)) --}}
+                                <form action="{{ route('delete.Custmer', [$customer->id]) }}" method="POST">
                                     @csrf
                                     @method('delete')
                                     <button type="submit" class="w-full">
@@ -61,27 +62,30 @@
                                             class="m-auto hover:scale-110 transition" alt="">
                                     </button>
                                 </form>
+                                         {{-- @else
+                                    <span>لا يوجد بيانات</span> <!-- أو أي رسالة بديلة -->
+                                @endif --}}
                             </td>
 
                             <td class="flex-1 text-right border border-gray-400 pr-2 py-1">
-                                @if ($d && isset($d->id))
-                                    <a href="{{ route('show.Custmer', [$d->id]) }}" class="block">
+                                {{-- @if ($d && isset($customer->id)) --}}
+                                    <a href="{{ route('show.Custmer', [$customer->id]) }}" class="block">
                                         <img src="{{ asset('img/edit.png') }}"
                                              width="22"
                                              class="m-auto hover:scale-110 transition-transform duration-200"
                                              alt="Edit">
                                     </a>
-                                @else
+                                {{-- @else
                                     <span>لا يوجد بيانات</span> <!-- أو أي رسالة بديلة -->
-                                @endif
+                                @endif --}}
                             </td>
 
-                            <td class=" flex-2 text-right border border-gray-400 pr-2 py-1 font-bold ">{{ $d->email }}
+                            <td class=" flex-2 text-right border border-gray-400 pr-2 py-1 font-bold ">{{ $customer->email }}
                             </td>
 
-                            <td class=" flex-2 text-right border border-gray-400 pr-2 py-1 font-bold ">{{ $d->phone }}
+                            <td class=" flex-2 text-right border border-gray-400 pr-2 py-1 font-bold ">{{ $customer->phone }}
                             </td>
-                            <td class=" flex-7 text-right border border-gray-400 pr-2 py-1  font-bold"> {{ $d->name }}
+                            <td class=" flex-7 text-right border border-gray-400 pr-2 py-1  font-bold"> {{ $customer->name }}
                             </td>
                             <td class=" flex-1 text-right border border-gray-400 pr-2 py-1 ">1 </td>
                         </tr>

@@ -64,24 +64,52 @@ class ItemsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Items $items)
+    public function edit($id)
     {
-        //
+        $item = Items::findOrFail($id);
+        $cat = cateogry::all();
+        $units = units::all();
+        return view('Items/UpdateItem', compact('item', 'cat', 'units'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Items $items)
+    public function update(Request $request, $id)
     {
-        //
+
+        $item = Items::findOrFail($id);
+        $item->update([
+            'name' => $request->name,
+            'mount' => $request->mount,
+            'cat' => $request->cat,
+            'unit' => $request->unit,
+            'wholesale_price' => $request->wholesale_price,
+            'sales_price' => $request->sales_price,
+            'limit_Short' => $request->limit_Short,
+            'overTime' => $request->overTime,
+            'isDisplay' => $request->isDisplay,
+            'description' => $request->description,
+            'barcode' => $request->barcode,
+        ]);
+
+        if ($request->hasFile('img')) {
+            $imageName = time().'.'.$request->img->extension();
+            $request->img->move(public_path('images'), $imageName);
+            $item->img = $imageName;
+            $item->save();
+        }
+        session()->flash('status', 'تم تعديل الصنف بنجاح!');
+        return to_route("get_Items");
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Items $items)
+    public function destroy($id)
     {
-        //
+        Items::where("id", $id)->delete();
+        session()->flash('status', 'تمت العمليه بنجاح');
+        return to_route("get_Items");
     }
 }

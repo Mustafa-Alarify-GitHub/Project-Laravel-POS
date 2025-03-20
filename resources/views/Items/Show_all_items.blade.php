@@ -19,6 +19,7 @@
                     <th class="py-3 px-6 text-left">الباركود</th>
                     <th class="py-3 px-6 text-left">الصورة</th>
                     <th class="py-3 px-6 text-left">تاريخ الإنشاء</th>
+                    <th class="py-3 px-6 text-left">العمليات</th>
                 </tr>
             </thead>
             <tbody class="text-gray-600 text-sm">
@@ -42,6 +43,20 @@
                         </td>
                         <td class="py-3 text-nowrap px-6">{{ \Carbon\Carbon::parse($product->created_at)->translatedFormat('d F Y') }}</td>
 
+                        <td class="py-3 px-6">
+                            <div class="flex justify-center items-center">
+                                <a href="{{ route('item.edit', $product->id) }}" class="mr-2">
+                                    <img src="{{ asset('img/edit.png') }}" width="22px" class="m-auto hover:scale-110 transition" alt="">
+                                </a>
+                                <form action="{{ route('item.destroy', $product->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit">
+                                        <img src="{{ asset('img/delete.png') }}" width="22px" class="m-auto hover:scale-110 transition" alt="">
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
