@@ -2,7 +2,7 @@
 @section('content')
     <div class="w-[90%] flex justify-start flex-col bg-white mt-9">
         <div class="flex justify-center items-center h-14 text-xl bg-gray-100 font-bold text-sky-400">
-           <span><a href="{{ route('purchases') }}"> المشتريات<</a></span> الفواتير
+           {{-- <span><a href="{{ route('purchases') }}"> المشتريات<</a></span> الفواتير --}}
         </div>
 
         <div class="flex flex-row justify-end items-center h-14 ">

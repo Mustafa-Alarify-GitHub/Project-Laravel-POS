@@ -7,6 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class clints extends Model
 {
-    protected $guarded =[];
+      protected $table = 'clients'; 
+
+    protected $fillable = [
+        'name',
+        'email',
+        'phone',
+    ];
     use HasFactory;
 }

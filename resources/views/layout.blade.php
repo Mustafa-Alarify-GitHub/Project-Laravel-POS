@@ -66,7 +66,7 @@
             </a>
             {{-- End Link --}}
             {{-- Start Link --}}
-            <a href="{{ route('Sales') }}"
+            <a href="{{ route('sales.index') }}"
                 class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition">
                 <div class=" flex justify-center w-1/4 h-full items-center">
                     <img src={{ asset('img/sales.png') }} width="30px">
@@ -128,7 +128,7 @@
             {{-- End Link --}}
 
             {{-- Start Link --}}
-            <a href="{{ route('purchases') }}"
+            <a href="{{ route('purchases.index') }}"
                 class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition">
                 <div class=" flex justify-center w-1/4 h-full items-center">
                     <img src={{ asset('img/buy.png') }} width="30px">
