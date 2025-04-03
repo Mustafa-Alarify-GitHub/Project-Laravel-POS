@@ -66,10 +66,8 @@
                             <td class="flex-1 text-right border border-gray-400 pr-2 py-1">
                                 @if ($d && isset($d->id))
                                     <a href="{{ route('show.Custmer', [$d->id]) }}" class="block">
-                                        <img src="{{ asset('img/edit.png') }}"
-                                             width="22"
-                                             class="m-auto hover:scale-110 transition-transform duration-200"
-                                             alt="Edit">
+                                        <img src="{{ asset('img/edit.png') }}" width="22"
+                                            class="m-auto hover:scale-110 transition-transform duration-200" alt="Edit">
                                     </a>
                                 @else
                                     <span>لا يوجد بيانات</span> <!-- أو أي رسالة بديلة -->
