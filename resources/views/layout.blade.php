@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="app.css">
     @vite('resources/css/app.css')
     <title>Document</title>
@@ -43,9 +44,29 @@
                     المنتجات
                 </h1>
             </a>
+
+                        <a href="{{ route('branches.index') }}"
+                class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition">
+                <div class=" flex justify-center w-1/4 h-full items-center">
+                    <img src={{ asset('img/add_shopping.png') }} width="30px">
+                </div>
+                <h1 class=" flex justify-start transition items-center w-3/4 h-full font-bold">
+                    الفروع
+                </h1>
+            </a>
+
+                                    <a href="{{ route('employees.index') }}"
+                class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition">
+                <div class=" flex justify-center w-1/4 h-full items-center">
+                    <img src={{ asset('img/add_shopping.png') }} width="30px">
+                </div>
+                <h1 class=" flex justify-start transition items-center w-3/4 h-full font-bold">
+                    الموظفين
+                </h1>
+            </a>
             {{-- End Link --}}
             {{-- Start Link --}}
-            <a href="{{ route('Sales') }}"
+            <a href="{{ route('sales.index') }}"
                 class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition">
                 <div class=" flex justify-center w-1/4 h-full items-center">
                     <img src={{ asset('img/sales.png') }} width="30px">
@@ -70,14 +91,7 @@
             <!-- {{-- End Link --}} -->
 
                 <!-- {{-- Start Link --}}
-                <a href="{{ route('Empleoy') }}" class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition" >
-                    <div class=" flex justify-center w-1/4 h-full items-center">
-                        <img src={{ asset('img/employee.png') }} width="30px" >
-                    </div>
-                    <h1 class=" flex justify-start transition items-center w-3/4 h-full font-bold">
-                        الموظفين
-                    </h1>
-                </a>
+
                 {{-- End Link --}} -->
                 
                 {{-- Start Link --}}
@@ -114,7 +128,7 @@
             {{-- End Link --}}
 
             {{-- Start Link --}}
-            <a href="{{ route('purchases') }}"
+            <a href="{{ route('purchases.index') }}"
                 class="w-[95%] text-gray-400  h-12 flex justify-between hover:underline my-1 hover:text-white  transition">
                 <div class=" flex justify-center w-1/4 h-full items-center">
                     <img src={{ asset('img/buy.png') }} width="30px">

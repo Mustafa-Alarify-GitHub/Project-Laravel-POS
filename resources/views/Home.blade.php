@@ -16,7 +16,7 @@
 
 
             {{-- Card 2 --}}
-            <a href="{{ route('purchases') }}"
+            <a href="#"
                 class="w-[30%]  h-[200px] bg-white rounded-2xl flex justify-between flex-col">
                 <div class="w-full h-1/2 flex justify-center items-center flex-col">
                     <img src="{{ asset('img/_open_box.png') }}" width="40px" alt="">

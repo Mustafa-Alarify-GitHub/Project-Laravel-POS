@@ -5,7 +5,7 @@
             تعديل عميل جديده
         </div>
 
-        <form action="{{ route('add.Custmer') }}" method="POST">
+        <form action="{{ route('edit.Custmer',$data->id) }}" method="POST">
             @csrf
             @method('put')
             <table class="w-full">

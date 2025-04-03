@@ -12,8 +12,9 @@ class Cutomers_Controller extends Controller
      */
     public function index()
     {
-        $data=clints::get();
-        return view('Custmers.Custmer', ['data' => $data]);
+        // $data=clints::get();
+        $customers = clints::all();
+        return view('Custmers.Custmer', ['customers' => $customers]);
     }
 
     /**
@@ -22,7 +23,7 @@ class Cutomers_Controller extends Controller
     public function create()
     {
 
-        }
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -42,14 +43,22 @@ class Cutomers_Controller extends Controller
      */
     public function show(string $id)
     {
-        $data=clints::where("id",$id)->first();
-        return view('Custmers.Custmer', ['data' => $data]);
+
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
+    {
+                $customers=clints::where("id",$id)->first();
+        return view('Custmers.Custmer', ['customers' => $customers]);
+   }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
     {
         dd($id);
         clints::where("id",$id)->update([
@@ -57,20 +66,13 @@ class Cutomers_Controller extends Controller
             "email"=>$request->email ,
             "phone"=>$request->phone ,
         ]);
-        return to_route("Custmer");    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-
+        return to_route("Custmer"); 
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy( $id)
     {
 
         clints::destroy($id);

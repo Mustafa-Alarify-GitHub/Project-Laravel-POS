@@ -95,7 +95,7 @@
                     {{-- Input الموصفات --}}
                     <tr class="w-full flex justify-end items-center py-2">
                         <td class="w-4/5 flex justify-end">
-                            <textarea class="w-[70%]  border border-gray-400 text-center border " name="description" id="" cols="30"
+                            <textarea class="w-[70%]  border border-gray-400 text-center  " name="description" id="" cols="30"
                                 rows="5"></textarea>
                         </td>
                         <td class="w-1/5 flex justify-end mr-2 font-bold">: الموصفات </td>
